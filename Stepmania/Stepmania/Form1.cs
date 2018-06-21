@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using WMPLib;
 
 namespace Stepmania
 {
@@ -30,6 +31,7 @@ namespace Stepmania
         public Form1()
         {
             InitializeComponent();
+
             progressBar1.Minimum = 1;
             progressBar1.Maximum = 100;
             progressBar1.Value = 50;
@@ -40,7 +42,7 @@ namespace Stepmania
         }
 
         //Functions for all difficulties speed at which notes fall is changed here.
-        public void easydifficulty() {int num = 2; }
+        public void easydifficulty() { int num = 2; }
         public void mediumdifficulty() { int num = 5; }
         public void harddifficulty() { int num = 8; }
 
@@ -58,18 +60,27 @@ namespace Stepmania
         }
         private void missednote()
         {
+
             if (paused == false)
             {
                 try { progressBar1.Value--; } catch { }
                 misses++;
-                System.Media.SoundPlayer soundPlayerwronganswer = new System.Media.SoundPlayer(currentdir + @"\Music" + @"\Wronganswer.wav");
-                soundPlayerwronganswer.Play();
+
+                new System.Threading.Thread(() =>
+                {
+                    try
+                    {
+                        var c = new WindowsMediaPlayer();
+                        c.URL = (currentdir + @"\Music" + @"\Wronganswer.wav");
+                        c.controls.play();
+                    }
+                    catch{}
+                }).Start();
             }
             if (progressBar1.Value == 1)
             {
-                Application.Exit();
+                Environment.Exit(0);
             }
-            
         }
         private void pictureboxresseting()
         {
@@ -117,15 +128,11 @@ namespace Stepmania
             {
                 harddifficulty();
             }
-            
-            
-     
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
             num++;
             label3.Text = Convert.ToString("Current speed:" + num + "!");
-                       
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -195,41 +202,22 @@ namespace Stepmania
                     paused = false;
                     groupBox1.Visible = false;
                 }
-                else if(groupBox1.Visible == false)
+                else if (groupBox1.Visible == false)
                 {
                     timer1.Stop();
                     groupBox1.Visible = true;
                 }
-
             }
-            
-            
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Application.Restart();
-        }
-
-        private void Btn_Easy_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Btn_Medium_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Btn_Hard_Click(object sender, EventArgs e)
-        {
-            
+            Environment.Exit(0);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -240,6 +228,14 @@ namespace Stepmania
         private void button5_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Casey Beresford + Alastair Jones");
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            timer1.Start();
+            timer2.Start();
+            paused = false;
+            groupBox1.Visible = false;
         }
     }
 }
