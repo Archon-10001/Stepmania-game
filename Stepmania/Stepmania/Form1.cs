@@ -15,6 +15,7 @@ namespace Stepmania
         bool difficulteasy = false;
         bool difficultmedium = true;
         bool difficultryhard = false;
+        bool paused = false;
 
         bool hitable = true;
         bool hitable1 = true;
@@ -55,14 +56,18 @@ namespace Stepmania
         }
         private void missednote()
         {
-            System.Media.SoundPlayer soundPlayerwronganswer = new System.Media.SoundPlayer(@"C:\Users\casey\source\repos\Stepmania\Stepmania\Resources\Wronganswer.wav");
-            soundPlayerwronganswer.Play();
-            try { progressBar1.Value--; } catch { }
+            if (paused == false)
+            {
+                try { progressBar1.Value--; } catch { }
+                misses++;
+                System.Media.SoundPlayer soundPlayerwronganswer = new System.Media.SoundPlayer(@"P:\Github projects\Stepmania-game\Stepmania\Stepmania\Resources\Wronganswer.wav");
+                soundPlayerwronganswer.Play();
+            }
             if (progressBar1.Value == 1)
             {
                 Application.Exit();
             }
-            misses++;
+            
         }
         private void pictureboxresseting()
         {
@@ -110,6 +115,7 @@ namespace Stepmania
             {
                 harddifficulty();
             }
+            
             
      
         }
@@ -178,9 +184,13 @@ namespace Stepmania
             }
             if (e.KeyCode == Keys.Escape)
             {
+                paused = true;
+                timer2.Stop();
                 if (groupBox1.Visible == true)
                 {
                     timer1.Start();
+                    timer2.Start();
+                    paused = false;
                     groupBox1.Visible = false;
                 }
                 else if(groupBox1.Visible == false)
