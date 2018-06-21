@@ -18,9 +18,19 @@ T:\Stepmania\Stepmania\obj\Debug\Stepmania.csproj.GenerateResource.Cache
 T:\Stepmania\Stepmania\obj\Debug\Stepmania.exe
 T:\Stepmania\Stepmania\obj\Debug\Stepmania.pdb
 C:\Users\casey\source\repos\Stepmania\Stepmania\obj\Debug\Stepmania.End_game.resources
-P:\Github projects\Stepmania-game\Stepmania\Stepmania\obj\Debug\Stepmania.csprojResolveAssemblyReference.cache
-P:\Github projects\Stepmania-game\Stepmania\Stepmania\obj\Debug\Stepmania.End_game.resources
-P:\Github projects\Stepmania-game\Stepmania\Stepmania\obj\Debug\Stepmania.Form1.resources
-P:\Github projects\Stepmania-game\Stepmania\Stepmania\obj\Debug\Stepmania.csproj.GenerateResource.cache
-P:\Github projects\Stepmania-game\Stepmania\Stepmania\obj\Debug\Stepmania.exe
-P:\Github projects\Stepmania-game\Stepmania\Stepmania\obj\Debug\Stepmania.pdb
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\bin\Debug\Stepmania.exe.config
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\bin\Debug\Stepmania.exe
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\bin\Debug\Stepmania.pdb
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\Stepmania.csprojResolveAssemblyReference.cache
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\Stepmania.End_game.resources
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\Stepmania.Form1.resources
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\Stepmania.Properties.Resources.resources
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\Stepmania.csproj.GenerateResource.cache
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\Stepmania.csproj.CoreCompileInputs.cache
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\Stepmania.exe
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\Stepmania.pdb
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\Interop.WMPLib.dll
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\obj\Debug\Stepmania.csproj.ResolveComReference.cache
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\bin\Debug\Interop.WMPLib.dll
+C:\Users\Alastair\Desktop\Stepmania-game-master\Stepmania\Stepmania\bin\Debug\AxInterop.WMPLib.dll
