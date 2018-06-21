@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Stepmania
 {
@@ -25,6 +26,7 @@ namespace Stepmania
         int points = 0;
         int misses = 0;
         int num = 1;
+        string currentdir = Directory.GetCurrentDirectory();
         public Form1()
         {
             InitializeComponent();
@@ -60,7 +62,7 @@ namespace Stepmania
             {
                 try { progressBar1.Value--; } catch { }
                 misses++;
-                System.Media.SoundPlayer soundPlayerwronganswer = new System.Media.SoundPlayer(@"P:\Github projects\Stepmania-game\Stepmania\Stepmania\Resources\Wronganswer.wav");
+                System.Media.SoundPlayer soundPlayerwronganswer = new System.Media.SoundPlayer(currentdir + @"\Music" + @"\Wronganswer.wav");
                 soundPlayerwronganswer.Play();
             }
             if (progressBar1.Value == 1)

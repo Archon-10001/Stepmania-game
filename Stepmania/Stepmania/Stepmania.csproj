@@ -100,8 +100,5 @@
   <ItemGroup>
     <None Include="Resources\Up Roll BottomCap active.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Wronganswer.wav" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
